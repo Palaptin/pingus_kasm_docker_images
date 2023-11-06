@@ -35,7 +35,7 @@ jobs:
     needs: list-dockerfiles
     runs-on: ubuntu-latest
     strategy:
-      matrix: ${{ fromJson(needs.list-dockerfiles.outputs.matrix) }}
+      matrix: ${{ needs.list-dockerfiles.outputs.matrix }}
     permissions:
       contents: read
       packages: write
