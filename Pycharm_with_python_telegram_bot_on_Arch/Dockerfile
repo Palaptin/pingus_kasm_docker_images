@@ -6,4 +6,4 @@ RUN echo -e '[Desktop Entry]\nVersion=1.0\nType=Application\nName=PyCharm Commun
 RUN sudo -u kasm-user pycharm installPlugins me.lensvol.blackconnect
 RUN sudo -u kasm-user mkdir -p '/home/kasm-user/.config/JetBrains/PyCharmCE2023.1/options' && echo -e '<application>\n<component name="BlackConnectGlobalSettings" bindOnHostname="127.0.0.1" blackdBinaryPath="/usr/sbin/blackd"/>\n</application>' >> sudo -u kasm-user /home/kasm-user/.config/JetBrains/PyCharmCE2023.1/options/other.xml
 RUN sudo -u kasm-user pip install -U sqlalchemy[asyncio] asyncmy --break-system-packages
-RUN sudo -u kasm-user yay -S python-telegram-bot python-aiolimiter sqlacodegen --noconfirm
+RUN sudo -u kasm-user yay -S python-telegram-bot python-aiolimiter python-types-pyyaml sqlacodegen --noconfirm
